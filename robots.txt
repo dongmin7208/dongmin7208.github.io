@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dongmin7208.github.io/sitemap.xml
