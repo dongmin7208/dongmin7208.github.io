@@ -3,23 +3,191 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Moon Rabbit Hop</title>
+<title>Moon Rabbit Hop – One-tap jumping game on the moon (iPhone)</title>
+<meta name="description" content="Moon Rabbit Hop (つきうさホップ / 달토끼 점프) is a free one-tap arcade game for iPhone. Tap to jump over spiky rocks on the moon and stay low under candy stars. Unlock 6 rabbits and compete on the leaderboard.">
+<link rel="canonical" href="https://dongmin7208.github.io/moon-rabbit-hop/">
+<meta name="apple-itunes-app" content="app-id=6823961631">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moon Rabbit Hop – One-tap jumping game on the moon">
+<meta property="og:description" content="Tap to jump over spiky rocks on the moon. Free on the App Store.">
+<meta property="og:url" content="https://dongmin7208.github.io/moon-rabbit-hop/">
+<meta property="og:image" content="https://dongmin7208.github.io/moon-rabbit-hop/img/og.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MobileApplication", "VideoGame"],
+      "@id": "https://dongmin7208.github.io/moon-rabbit-hop/#app",
+      "name": "Moon Rabbit Hop",
+      "alternateName": ["つきうさホップ", "달토끼 점프"],
+      "description": "A one-tap arcade game. Tap to make a rabbit jump over spiky rocks on the moon, and don't jump under candy stars. The higher your score, the faster it runs.",
+      "url": "https://dongmin7208.github.io/moon-rabbit-hop/",
+      "image": "https://dongmin7208.github.io/moon-rabbit-hop/icon.png",
+      "screenshot": [
+        "https://dongmin7208.github.io/moon-rabbit-hop/img/en-1.jpg",
+        "https://dongmin7208.github.io/moon-rabbit-hop/img/en-2.jpg",
+        "https://dongmin7208.github.io/moon-rabbit-hop/img/en-3.jpg"
+      ],
+      "operatingSystem": "iOS 15.0 or later",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Arcade",
+      "genre": ["Arcade", "Casual"],
+      "gamePlatform": "iPhone",
+      "playMode": "SinglePlayer",
+      "contentRating": "4+",
+      "inLanguage": ["en", "ja", "ko"],
+      "downloadUrl": "https://apps.apple.com/app/id6823961631",
+      "installUrl": "https://apps.apple.com/app/id6823961631",
+      "sameAs": ["https://apps.apple.com/app/id6823961631"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      "publisher": { "@id": "https://dongmin7208.github.io/moon-rabbit-hop/#org" },
+      "author": { "@id": "https://dongmin7208.github.io/moon-rabbit-hop/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dongmin7208.github.io/moon-rabbit-hop/#org",
+      "name": "MORU LIMITED LIABILITY COMPANY",
+      "alternateName": "Moru合同会社",
+      "url": "https://moruit.com/",
+      "email": "info@moru.tech"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is Moon Rabbit Hop free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The game is free to download and play. It shows ads, and you can remove them with a one-time in-app purchase (Remove Ads) from Settings." } },
+        { "@type": "Question", "name": "How do you play Moon Rabbit Hop?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tap anywhere to jump. Jump over the spiky rocks on the moon, but stay on the ground when you pass under a candy star. Every obstacle you clear is one point." } },
+        { "@type": "Question", "name": "Can I play without an internet connection?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The game itself works offline. Ads and the Game Center leaderboard need a connection." } },
+        { "@type": "Question", "name": "Which devices does it support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "iPhone with iOS 15.0 or later. It is available on the App Store in 175 countries and regions, in English, Japanese and Korean." } },
+        { "@type": "Question", "name": "How do I unlock new rabbits?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Six rabbits, including Sakura, Yomogi and Gold, unlock as your best score goes up." } }
+      ]
+    }
+  ]
+}
+</script>
 <style>
-  :root { --bg:#1B1440; --fg:#F4F0FF; --muted:#B9B0D9; --accent:#FFD166; }
+  :root { --bg:#1B1440; --card:#251C57; --fg:#F4F0FF; --muted:#B9B0D9; --accent:#FFD166; }
+  * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system, "Hiragino Sans", "Apple SD Gothic Neo", sans-serif; }
-  main { max-width:640px; margin:0 auto; padding:48px 16px; text-align:center; }
-  img { width:128px; height:128px; border-radius:28px; } a { color:var(--accent); }
-  p { color:var(--muted); }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 56px; }
+  header { text-align:center; }
+  header img { width:112px; height:112px; border-radius:24px; }
+  h1 { margin:12px 0 4px; font-size:28px; }
+  h2 { font-size:20px; margin:0 0 8px; }
+  h3 { font-size:16px; margin:20px 0 4px; color:var(--accent); }
+  p, li, dd { color:var(--muted); }
+  a { color:var(--accent); }
+  .names { margin:0; }
+  .badge { display:inline-block; margin:16px 0 4px; padding:12px 22px; border-radius:12px; background:var(--fg); color:var(--bg); font-weight:700; text-decoration:none; }
+  nav { margin:12px 0 28px; text-align:center; font-size:14px; }
+  nav a { margin:0 8px; }
+  .shots { display:flex; gap:10px; overflow-x:auto; padding:4px 0 8px; }
+  .shots img { width:180px; height:auto; border-radius:14px; flex:none; }
+  section { background:var(--card); border-radius:16px; padding:20px; margin:0 0 20px; }
+  ul { padding-left:20px; margin:4px 0; }
+  dt { font-weight:700; margin-top:12px; }
+  dd { margin:2px 0 0; }
+  footer { text-align:center; font-size:14px; }
+  footer p { margin:6px 0; }
 </style>
 </head>
 <body>
 <main>
-<img src="icon.png" alt="">
-<h1>Moon Rabbit Hop</h1>
-<p>つきうさホップ · 달토끼 점프</p>
-<p>One tap. Hop between the moon and the sky.</p>
-<p>Support / お問い合わせ / 문의: <a href="mailto:info@moru.tech">info@moru.tech</a> (MORU LIMITED LIABILITY COMPANY)</p>
-<p><a href="privacy.html">Privacy Policy / プライバシーポリシー / 개인정보 처리방침</a></p>
+<header>
+  <img src="icon.png" alt="Moon Rabbit Hop app icon">
+  <h1>Moon Rabbit Hop</h1>
+  <p class="names">つきうさホップ · 달토끼 점프</p>
+  <a class="badge" href="https://apps.apple.com/app/id6823961631">Download on the App Store</a>
+  <p>Free · iPhone (iOS 15+)</p>
+</header>
+<nav><a href="#en">English</a><a href="#ja">日本語</a><a href="#ko">한국어</a></nav>
+
+<section id="en" lang="en">
+  <h2>A one-tap jumping game on the moon</h2>
+  <div class="shots">
+    <img src="img/en-1.jpg" alt="Tap to jump" width="360" height="782" loading="lazy">
+    <img src="img/en-2.jpg" alt="Leap over the spikes" width="360" height="782" loading="lazy">
+    <img src="img/en-3.jpg" alt="Mind the candy stars" width="360" height="782" loading="lazy">
+  </div>
+  <p>Help a little rabbit run around the moon with just one tap. Jump over the spiky rocks, but don't be in the air when you pass under a candy star. The higher your score, the faster the rabbit runs. Most runs last under a minute.</p>
+  <h3>How to play</h3>
+  <ul>
+    <li>Tap anywhere to jump</li>
+    <li>Jump over spiky rocks; stay on the ground under candy stars</li>
+    <li>Clear an obstacle, score a point</li>
+    <li>Unlock 6 rabbits, including Sakura, Yomogi and Gold, by beating your best score</li>
+    <li>Compete with players worldwide on the Game Center leaderboard</li>
+  </ul>
+  <h3>FAQ</h3>
+  <dl>
+    <dt>Is it free?</dt><dd>Yes. It shows ads, and you can remove them with a one-time purchase (Remove Ads) in Settings.</dd>
+    <dt>Can I play offline?</dt><dd>Yes. Ads and the leaderboard need a connection.</dd>
+    <dt>Which devices?</dt><dd>iPhone with iOS 15.0 or later.</dd>
+  </dl>
+</section>
+
+<section id="ja" lang="ja">
+  <h2>タップで跳ぶ、月うさぎのジャンプゲーム</h2>
+  <div class="shots">
+    <img src="img/ja-1.jpg" alt="タップでジャンプ" width="360" height="782" loading="lazy">
+    <img src="img/ja-2.jpg" alt="トゲ岩を跳び越えよう" width="360" height="782" loading="lazy">
+    <img src="img/ja-3.jpg" alt="空の金平糖に注意" width="360" height="782" loading="lazy">
+  </div>
+  <p>月のまわりを走るうさぎを、タップひとつでジャンプさせるゲームです。月面のトゲ岩は跳び越え、空に浮かぶ金平糖の下では跳ばないようにします。スコアが上がるにつれてスピードも上がります。1回のプレイはたいてい1分もかかりません。</p>
+  <h3>遊び方</h3>
+  <ul>
+    <li>画面をタップするとジャンプします</li>
+    <li>トゲ岩は跳び越え、金平糖の下では跳ばないようにします</li>
+    <li>障害物をひとつよけるごとに1点です</li>
+    <li>ベストスコアに応じて、さくら・よもぎ・きんなど6種類のうさぎが使えるようになります</li>
+    <li>Game Center のランキングで、世界中のプレイヤーとスコアを競えます</li>
+  </ul>
+  <h3>よくある質問</h3>
+  <dl>
+    <dt>無料で遊べますか？</dt><dd>はい。広告が表示されます。設定画面の「広告を削除」を一度購入すると、広告が出なくなります。</dd>
+    <dt>オフラインでも遊べますか？</dt><dd>はい。広告とランキングにはインターネット接続が必要です。</dd>
+    <dt>対応機種は？</dt><dd>iOS 15.0 以降の iPhone です。</dd>
+  </dl>
+</section>
+
+<section id="ko" lang="ko">
+  <h2>탭 한 번으로 점프하는 달토끼</h2>
+  <div class="shots">
+    <img src="img/ko-1.jpg" alt="탭해서 점프" width="360" height="782" loading="lazy">
+    <img src="img/ko-2.jpg" alt="가시 바위를 뛰어넘어라" width="360" height="782" loading="lazy">
+    <img src="img/ko-3.jpg" alt="별사탕을 조심해" width="360" height="782" loading="lazy">
+  </div>
+  <p>달 둘레를 달리는 토끼를 탭 한 번으로 점프시키는 게임입니다. 가시 바위는 뛰어넘고, 하늘에 뜬 별사탕 아래에서는 뛰지 않아야 합니다. 점수가 오를수록 빨라집니다. 한 판은 대부분 1분 안에 끝납니다.</p>
+  <h3>플레이 방법</h3>
+  <ul>
+    <li>화면을 탭하면 점프</li>
+    <li>가시 바위는 뛰어넘고, 별사탕 아래에서는 뛰지 않기</li>
+    <li>장애물 하나를 피할 때마다 1점</li>
+    <li>최고 기록에 따라 벚꽃·쑥·황금 등 토끼 6종이 열립니다</li>
+    <li>Game Center 랭킹에서 전 세계 플레이어와 점수를 겨룰 수 있습니다</li>
+  </ul>
+  <h3>자주 묻는 질문</h3>
+  <dl>
+    <dt>무료인가요?</dt><dd>네. 광고가 나오며, 설정의 '광고 제거'를 한 번 구매하면 광고가 사라집니다.</dd>
+    <dt>오프라인에서도 되나요?</dt><dd>네. 광고와 랭킹은 인터넷 연결이 필요합니다.</dd>
+    <dt>지원 기기는?</dt><dd>iOS 15.0 이상의 iPhone입니다.</dd>
+  </dl>
+</section>
+
+<footer>
+  <p>Support / お問い合わせ / 문의: <a href="mailto:info@moru.tech">info@moru.tech</a></p>
+  <p><a href="privacy.html">Privacy Policy / プライバシーポリシー / 개인정보 처리방침</a></p>
+  <p>© 2026 MORU LIMITED LIABILITY COMPANY</p>
+</footer>
 </main>
 </body>
 </html>
